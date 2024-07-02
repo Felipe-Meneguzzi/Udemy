@@ -9,7 +9,7 @@ public class CalculadoraDolar {
 
     public static double custoDolarComIOF(double precoDolar, double quantDolar){
         double impostoIOF = (IOF / 100) * quantDolar;
-        return 0;
+        return 1;
     }
 
 }
