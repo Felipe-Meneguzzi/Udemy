@@ -2,6 +2,9 @@ package section8.exercicioClasseStatica;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(CalculadoraDolar.custoDolarComIOF(3.1, 200));
+        double precoDolar = 3.1;
+
+        System.out.println(CalculadoraDolar.converteParaRealComIOF(precoDolar, 200));
+        System.out.println(CalculadoraDolar.converteParaDolarComIOF(precoDolar, 657.20));
     }
 }
