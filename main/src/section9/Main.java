@@ -16,9 +16,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Banco cliente;
         String nome;
-        double deposito = 0;
+        double deposito;
         int id;
-        double limite = 0;
+        double limite;
         boolean depositoInicial, limitePadrao;
 
         System.out.print("Id da conta(int): ");
