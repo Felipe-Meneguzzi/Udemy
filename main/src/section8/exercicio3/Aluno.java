@@ -1,15 +1,15 @@
 package section8.exercicio3;
 
 public class Aluno {
-    private final String nome;
-    private int quantidadeNotas;
+    private final String NOME;
+    private final int QUANTIDADE_NOTAS;
     private double[] notas;
     private double mediaParaPassar;
 
-    public Aluno(String nome, int quantidadeNotas, double mediaParaPassar) {
-        this.nome = nome;
-        this.quantidadeNotas = quantidadeNotas;
-        this.notas = new double[quantidadeNotas];
+    public Aluno(String NOME, int QUANTIDADE_NOTAS, double mediaParaPassar) {
+        this.NOME = NOME;
+        this.QUANTIDADE_NOTAS = QUANTIDADE_NOTAS;
+        this.notas = new double[QUANTIDADE_NOTAS];
         this.mediaParaPassar = mediaParaPassar;
     }
 
@@ -19,7 +19,7 @@ public class Aluno {
 
     public void setNota(int numNota, double nota) {
         numNota -= 1;
-        if(numNota > this.quantidadeNotas - 1){
+        if(numNota > this.QUANTIDADE_NOTAS - 1){
             System.out.println("ERRO!! Setando mais notas do que a quantidade definida");
             return;
         }
@@ -27,7 +27,7 @@ public class Aluno {
     }
 
     public String getNome() {
-        return nome;
+        return NOME;
     }
 
     public double getMediaParaPassar() {
@@ -35,11 +35,7 @@ public class Aluno {
     }
 
     public int getQuantidadeNotas() {
-        return this.quantidadeNotas;
-    }
-
-    public void setQuantidadeNotas(int quantidadeNotas) {
-        this.quantidadeNotas = quantidadeNotas;
+        return this.QUANTIDADE_NOTAS;
     }
 
     public double getMedia() {
@@ -47,7 +43,7 @@ public class Aluno {
         for (double nota:notas){
             somaNotas += nota;
         }
-        return somaNotas / this.quantidadeNotas;
+        return somaNotas / this.QUANTIDADE_NOTAS;
     }
 
     public boolean isAprovado() {

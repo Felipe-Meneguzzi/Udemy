@@ -26,18 +26,15 @@ public class Retangulo {
     }
 
     public double getArea() {
-        double area = this.height * this.width;
-        return area;
+        return this.height * this.width;
     }
 
     public double getPerimeter() {
-        double perimetro = (this.height * 2) + (this.width * 2);
-        return perimetro;
+        return (this.height * 2) + (this.width * 2);
     }
 
     public double getDiagonal() {
-        double diagonal = Math.sqrt((width * width) + (height * height));
-        return diagonal;
+        return Math.sqrt((width * width) + (height * height));
     }
 
 }
