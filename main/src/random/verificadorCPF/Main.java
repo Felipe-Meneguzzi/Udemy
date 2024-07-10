@@ -1,17 +1,31 @@
 package random.verificadorCPF;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        String cpf = "03&¨{8.aa947.4Aa5Dd0*-/96";
+        Scanner sc = new Scanner(System.in);
+        String cpf;
 
-        System.out.println("CPF formatado sem pontuação: " + CPF.formataCPFSemPontuacao(cpf));
-        System.out.println("CPF formatado com pontuação: " + CPF.formataCPFComPontuacao(cpf));
-        System.out.println("Primeiros digitos do CPF em um Array: " + Arrays.toString(CPF.getArrayPrimeirosDigitosCPF(cpf)));
+        while (true) {
+            System.out.print("Digite o cpf: ");
+            cpf = sc.nextLine();
+            if (CPF.validaCPF(cpf)) {
+                System.out.println("CPF Valido");
+                sc.close();
+                break;
+            } else {
+                System.out.println("CPF Invalido");
+            }
+        }
+
+        System.out.println("CPF formatado sem pontuação: " + CPF.removePontuacao(cpf));
+        System.out.println("CPF formatado com pontuação: " + CPF.formataCPF(cpf));
         System.out.println("CPF completo em um Array: " + Arrays.toString(CPF.getArrayCPF(cpf)));
         System.out.println("Digitos Verificadores do CPF em um Array: " + Arrays.toString(CPF.getArrayDigitosVerificadores(cpf)));
+        System.out.println("\nCPF gerado: " + CPF.geraCPFValido(true));
 
     }
 
